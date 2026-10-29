@@ -124,6 +124,8 @@ section:last-of-type { border-bottom: 0; }
 /* Case studies */
 .cases { display: flex; flex-direction: column; gap: 28px; margin-top: 36px; }
 .case { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-wrap: wrap; }
+.case-art { padding: 16px; }
+.case-art svg { display: block; max-height: 240px; }
 .case-shot {
   flex: 1 1 260px; min-height: 220px; background: var(--surface);
   display: grid; place-items: center; color: var(--muted); padding: 24px; text-align: center;
@@ -309,10 +311,10 @@ section:last-of-type { border-bottom: 0; }
           <div class="case-body">
             <div class="case-top">
               <h3>NeuroLamb</h3>
-              <span class="mono muted">Client · USA</span>
+              <span class="mono muted">USA</span>
             </div>
             <dl>
-              <div><dt>Client</dt><dd>A brain-health outreach startup founded by a neuroscientist and a psychiatrist.</dd></div>
+              <div><dt>About</dt><dd>A brain-health outreach startup founded by a neuroscientist and a psychiatrist.</dd></div>
               <div><dt>Live now</dt><dd>A launch site that introduces the founders, their approach and what is coming, so they can start building partnerships.</dd></div>
               <div><dt>In build</dt><dd>The full site, with a browser-based editor for pages, blog, events and programs. Edits save to GitHub and go live on Cloudflare in about a minute, and the contact form runs on a Cloudflare Worker with spam protection.</dd></div>
             </dl>
@@ -338,18 +340,49 @@ section:last-of-type { border-bottom: 0; }
         </article>
 
         <article class="case">
-          <div class="case-shot mono">[Screenshot: marketplace app]</div>
+          <div class="case-shot case-art" aria-hidden="true">
+            <svg viewBox="0 0 320 200" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+              <rect x="8" y="8" width="304" height="184" rx="10" fill="var(--bg)" stroke="var(--line)"/>
+              <rect x="8" y="8" width="64" height="184" rx="10" fill="var(--fg)" opacity="0.06"/>
+              <rect x="20" y="24" width="36" height="6" rx="3" fill="var(--fg)" opacity="0.5"/>
+              <rect x="20" y="46" width="40" height="5" rx="2.5" fill="var(--fg)" opacity="0.18"/>
+              <rect x="20" y="60" width="32" height="5" rx="2.5" fill="var(--fg)" opacity="0.18"/>
+              <rect x="20" y="74" width="38" height="5" rx="2.5" fill="var(--fg)" opacity="0.18"/>
+              <rect x="20" y="88" width="30" height="5" rx="2.5" fill="var(--fg)" opacity="0.18"/>
+              <rect x="86" y="24" width="64" height="40" rx="6" fill="var(--accent)"/>
+              <rect x="94" y="34" width="28" height="5" rx="2.5" fill="var(--on-accent)" opacity="0.6"/>
+              <rect x="94" y="46" width="40" height="8" rx="3" fill="var(--on-accent)"/>
+              <rect x="158" y="24" width="64" height="40" rx="6" fill="var(--fg)" opacity="0.06"/>
+              <rect x="166" y="34" width="28" height="5" rx="2.5" fill="var(--fg)" opacity="0.35"/>
+              <rect x="166" y="46" width="36" height="8" rx="3" fill="var(--fg)" opacity="0.55"/>
+              <rect x="230" y="24" width="68" height="40" rx="6" fill="var(--fg)" opacity="0.06"/>
+              <rect x="238" y="34" width="28" height="5" rx="2.5" fill="var(--fg)" opacity="0.35"/>
+              <rect x="238" y="46" width="44" height="8" rx="3" fill="var(--fg)" opacity="0.55"/>
+              <rect x="86" y="76" width="212" height="1" fill="var(--line)"/>
+              <rect x="86" y="88" width="80" height="5" rx="2.5" fill="var(--fg)" opacity="0.4"/>
+              <rect x="250" y="86" width="48" height="10" rx="5" fill="var(--accent)"/>
+              <rect x="86" y="108" width="212" height="1" fill="var(--line)"/>
+              <rect x="86" y="118" width="96" height="5" rx="2.5" fill="var(--fg)" opacity="0.25"/>
+              <rect x="250" y="116" width="48" height="10" rx="5" fill="var(--fg)" opacity="0.12"/>
+              <rect x="86" y="136" width="212" height="1" fill="var(--line)"/>
+              <rect x="86" y="146" width="72" height="5" rx="2.5" fill="var(--fg)" opacity="0.25"/>
+              <rect x="250" y="144" width="48" height="10" rx="5" fill="var(--accent)"/>
+              <rect x="86" y="164" width="212" height="1" fill="var(--line)"/>
+              <rect x="86" y="174" width="88" height="5" rx="2.5" fill="var(--fg)" opacity="0.25"/>
+              <rect x="250" y="172" width="48" height="10" rx="5" fill="var(--fg)" opacity="0.12"/>
+            </svg>
+          </div>
           <div class="case-body">
             <div class="case-top">
-              <h3>B2B training marketplace</h3>
+              <h3>Training operations platform</h3>
               <span class="mono muted">Product · in development</span>
             </div>
             <dl>
-              <div><dt>Problem</dt><dd>Malaysian companies and trainers have no simple place to find, book and claim government-funded workforce training.</dd></div>
-              <div><dt>Role</dt><dd>Working partner building the application, from product structure and user flows to the build itself.</dd></div>
+              <div><dt>Problem</dt><dd>A Malaysian training company was running its programs and government-funded training claims across scattered tools.</dd></div>
+              <div><dt>Building</dt><dd>One internal system (ERP) to run the business end to end. I am a working partner on the product, from structure and user flows to the build itself.</dd></div>
               <div><dt>Status</dt><dd>In active development.</dd></div>
             </dl>
-            <div class="tags"><span class="tag">Product</span><span class="tag">Web app</span><span class="tag">Marketplace</span></div>
+            <div class="tags"><span class="tag">ERP</span><span class="tag">Web app</span><span class="tag">Product</span></div>
           </div>
         </article>
 
@@ -460,7 +493,7 @@ section:last-of-type { border-bottom: 0; }
       <h2 class="h2">From the camera to the codebase.</h2>
       <ol class="timeline">
         <li><span class="when">Now</span><span class="what"><strong>Media &amp; web lead</strong><span>Video, YouTube, design and web at The Wisdom Pearl, a US-based ministry and media organisation.</span></span></li>
-        <li><span class="when">Now</span><span class="what"><strong>Product partner</strong><span>Building a B2B training marketplace application in Malaysia.</span></span></li>
+        <li><span class="when">Now</span><span class="what"><strong>Product partner</strong><span>Building an operations platform for a training company in Malaysia.</span></span></li>
         <li><span class="when">13+ years</span><span class="what"><strong>Independent web developer</strong><span>Websites and platforms for business, SaaS, non-profit, media and membership clients.</span></span></li>
         <li><span class="when">2012–2018</span><span class="what"><strong>Broadcast television</strong><span>Camera operator, editor, then production coordinator at a national TV network in India.</span></span></li>
       </ol>
