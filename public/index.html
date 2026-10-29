@@ -142,6 +142,10 @@ section:last-of-type { border-bottom: 0; }
 .tag { font-family: var(--font-mono); font-size: 12px; background: var(--surface); padding: 4px 9px; border-radius: 6px; }
 .case a.more { color: var(--link); font-weight: 600; text-decoration: none; align-self: flex-start; padding-block: 6px; }
 .case a.more:hover { text-decoration: underline; }
+.feat { margin: 10px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.feat li { padding-left: 18px; position: relative; }
+.feat li::before { content: ""; position: absolute; left: 2px; top: 0.6em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.feat b { font-weight: 600; }
 .links { display: flex; flex-wrap: wrap; gap: 4px 24px; }
 
 /* Media reel */
@@ -392,18 +396,25 @@ section:last-of-type { border-bottom: 0; }
         </article>
 
         <article class="case">
-          <div class="case-shot mono">[Screenshot: hymnal web app]</div>
+          <div class="case-shot mono">[Screenshot: hymnal app and projection view]</div>
           <div class="case-body">
             <div class="case-top">
-              <h3>Hymnal web app</h3>
-              <span class="mono muted">Personal product</span>
+              <h3>Tamil hymnal web app</h3>
+              <span class="mono muted">Designed &amp; built solo</span>
             </div>
             <dl>
-              <div><dt>Vision</dt><dd>Put the hymnal in every singer's and worship leader's pocket, on any device.</dd></div>
-              <div><dt>What I made</dt><dd>A searchable, phone-first hymnal that runs in the browser and installs on Windows through the Microsoft Store.</dd></div>
-              <div><dt>Impact</dt><dd class="todo">[Add a result: users, churches using it, or a feature you are proud of]</dd></div>
+              <div><dt>Vision</dt><dd>Put more than 1,000 Tamil hymns in every worshipper's pocket and on every church screen, even without internet.</dd></div>
+              <div><dt>What I made</dt><dd>An installable app with 1,021 songs from three hymnals:
+                <ul class="feat">
+                  <li><b>Works offline</b> after one visit, and new or corrected songs update themselves.</li>
+                  <li><b>Church projection</b> with a presenter view, clicker support and no PowerPoint needed.</li>
+                  <li><b>Service song lists</b> shared by QR code or WhatsApp, with no accounts or personal data.</li>
+                  <li><b>Tamil and English</b> lyrics with transliteration, and search that forgives spelling.</li>
+                  <li><b>Runs everywhere:</b> Android, iPhone, Windows, Mac and Chromebook, plus the Microsoft Store.</li>
+                </ul></dd></div>
+              <div><dt>Impact</dt><dd class="todo">[Add a result: number of users, or churches projecting from it each week]</dd></div>
             </dl>
-            <div class="tags"><span class="tag">Web app</span><span class="tag">Microsoft Store</span><span class="tag">Search</span></div>
+            <div class="tags"><span class="tag">Progressive web app</span><span class="tag">Offline-first</span><span class="tag">Projection</span><span class="tag">Microsoft Store</span></div>
             <div class="links">
               <a class="more" href="https://sdahymn.app" rel="noopener">Open the web app →</a>
               <a class="more" href="https://apps.microsoft.com/detail/9n70fvr127cx" rel="noopener">Get it on Microsoft Store →</a>
