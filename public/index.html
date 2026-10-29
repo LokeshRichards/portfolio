@@ -125,6 +125,12 @@ section:last-of-type { border-bottom: 0; }
 .cases { display: flex; flex-direction: column; gap: 28px; margin-top: 36px; }
 .case { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-wrap: wrap; }
 .case-art { padding: 16px; }
+.case-img { display: block; padding: 0; min-width: 0; width: 100%; max-width: 100%; height: auto; min-height: 220px; object-fit: cover; object-position: top center; align-self: stretch; }
+.case { flex-direction: column; flex-wrap: nowrap; }
+.case > .case-shot { flex: none; min-height: 0; aspect-ratio: 16 / 9; height: auto; border-bottom: 1px solid var(--line); }
+.case > .case-img-contain { padding: 20px; }
+.case > .case-body { flex: none; }
+.case-img-contain { object-fit: contain; object-position: center; padding: 20px; background: var(--surface); max-height: 420px; }
 .case-art svg { display: block; max-height: 240px; }
 .case-shot {
   flex: 1 1 260px; min-height: 220px; background: var(--surface);
@@ -299,7 +305,7 @@ section:last-of-type { border-bottom: 0; }
 
       <div class="cases">
         <article class="case">
-          <div class="case-shot mono">[Screenshot: Yoga Unboxed library]</div>
+          <img class="case-shot case-img" src="/images/yoga-unboxed.webp" alt="Yoga Unboxed homepage with the season one episode list" width="874" height="487" loading="lazy">
           <div class="case-body">
             <div class="case-top">
               <h3>Yoga Unboxed</h3>
@@ -316,7 +322,7 @@ section:last-of-type { border-bottom: 0; }
         </article>
 
         <article class="case">
-          <div class="case-shot mono">[Screenshot: brain-health site]</div>
+          <img class="case-shot case-img" src="/images/brain-health-site.webp" alt="Brain-health education website homepage" width="1200" height="750" loading="lazy">
           <div class="case-body">
             <div class="case-top">
               <h3>Brain-health education website</h3>
@@ -396,15 +402,15 @@ section:last-of-type { border-bottom: 0; }
         </article>
 
         <article class="case">
-          <div class="case-shot mono">[Screenshot: hymnal app and projection view]</div>
+          <img class="case-shot case-img" src="/images/tamil-hymnal-app.webp" alt="Tamil hymnal app on two phones: a hymn in Tamil with English transliteration, and the home screen" width="1440" height="810" loading="lazy">
           <div class="case-body">
             <div class="case-top">
               <h3>Tamil hymnal web app</h3>
               <span class="mono muted">Designed &amp; built solo</span>
             </div>
             <dl>
-              <div><dt>Vision</dt><dd>Put more than 1,000 Tamil hymns in every worshipper's pocket and on every church screen, even without internet.</dd></div>
-              <div><dt>What I made</dt><dd>An installable app with 1,021 songs from three hymnals:
+              <div><dt>Vision</dt><dd>Put more than 850 Tamil hymns in every worshipper's pocket and on every church screen, even without internet.</dd></div>
+              <div><dt>What I made</dt><dd>An installable app with more than 850 songs from three hymnals:
                 <ul class="feat">
                   <li><b>Works offline</b> after one visit, and new or corrected songs update themselves.</li>
                   <li><b>Church projection</b> with a presenter view, clicker support and no PowerPoint needed.</li>
@@ -422,7 +428,7 @@ section:last-of-type { border-bottom: 0; }
           </div>
         </article>
         <article class="case">
-          <div class="case-shot mono">[Photo: book cover and spread]</div>
+          <img class="case-shot case-img case-img-contain" src="/images/quality-life-cover.webp" alt="Cover of How to Have a Quality Life by Martin Raj" width="524" height="812" loading="lazy">
           <div class="case-body">
             <div class="case-top">
               <h3>How to Have a Quality Life</h3>
