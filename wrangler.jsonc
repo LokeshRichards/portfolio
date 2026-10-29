@@ -1,0 +1,10 @@
+{
+  // Cloudflare Workers static-assets site. Everything in ./public is served as-is.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "lokesh-portfolio",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "404-page"
+  }
+}

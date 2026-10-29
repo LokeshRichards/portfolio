@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lokesh Richards</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Lokesh Richards — web developer and digital product builder. Websites and platforms for memberships, streaming, payments, funnels and apps, plus design and video.">
+<meta property="og:title" content="Lokesh Richards — Web developer & digital product builder">
+<meta property="og:description" content="Websites and platforms that do real work. 13+ years of client projects across India, Malaysia and the USA.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#FBFBF8">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: quiet studio — a profile sidebar beside one long reading column; stacks to a single column on phones. */
+:root {
+  --bg: #FBFBF8;
+  --surface: #F2F2EC;
+  --line: #E3E3DA;
+  --fg: #111210;
+  --muted: #55574F;
+  --accent: #C6F24E;      /* lime: used as a fill behind dark text only */
+  --on-accent: #111210;
+  --link: #3B5B0C;        /* readable olive for text links on light */
+  --code-bg: #111210;
+  --code-fg: #E9EBE2;
+  --font-display: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --radius: 14px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0F100E; --surface: #181A16; --line: #2A2D26; --fg: #EEF0E8; --muted: #A3A69B;
+    --accent: #C6F24E; --on-accent: #111210; --link: #C6F24E; --code-bg: #181A16; --code-fg: #E9EBE2;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0F100E; --surface: #181A16; --line: #2A2D26; --fg: #EEF0E8; --muted: #A3A69B;
+  --accent: #C6F24E; --on-accent: #111210; --link: #C6F24E; --code-bg: #181A16; --code-fg: #E9EBE2;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font-family: var(--font-body); font-size: 17px; line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; border-radius: 6px; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.mono { font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.01em; }
+.muted { color: var(--muted); }
+
+.shell {
+  max-width: 1240px; margin: 0 auto;
+  padding-left: max(24px, env(safe-area-inset-left, 0px));
+  padding-right: max(24px, env(safe-area-inset-right, 0px));
+  display: flex; flex-wrap: wrap; gap: 72px;
+}
+
+/* Sidebar */
+.side {
+  flex: 1 1 260px; max-width: 300px;
+  position: sticky; top: env(safe-area-inset-top, 0px); align-self: flex-start;
+  padding-block: 56px 32px; display: flex; flex-direction: column; gap: 28px;
+}
+.mark {
+  width: 56px; height: 56px; border-radius: 16px; background: var(--fg); color: var(--bg);
+  display: grid; place-items: center; font-family: var(--font-display); font-weight: 700; font-size: 20px; letter-spacing: -0.02em;
+}
+.who { display: flex; flex-direction: column; gap: 4px; }
+.who strong { font-family: var(--font-display); font-size: 21px; font-weight: 700; letter-spacing: -0.01em; }
+.status {
+  align-self: flex-start; display: inline-flex; align-items: center; gap: 10px;
+  background: var(--accent); color: var(--on-accent); font-size: 14px; font-weight: 500;
+  padding: 7px 14px; border-radius: 999px;
+}
+.status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--on-accent); }
+.nav { display: flex; flex-direction: column; border-top: 1px solid var(--line); }
+.nav a {
+  text-decoration: none; padding: 13px 0; border-bottom: 1px solid var(--line);
+  display: flex; justify-content: space-between; align-items: center; font-weight: 500;
+}
+.nav a span { font-family: var(--font-mono); font-size: 12px; color: var(--muted); }
+.nav a:hover { color: var(--link); }
+.nav a.is-active { color: var(--link); }
+.side-meta { display: flex; flex-direction: column; gap: 4px; color: var(--muted); }
+
+/* Main column */
+.main { flex: 999 1 560px; min-width: 0; padding-block: 56px 72px; }
+section { padding-block: 72px; border-bottom: 1px solid var(--line); scroll-margin-top: 24px; }
+section:first-child { padding-top: 0; }
+section:last-of-type { border-bottom: 0; }
+.eyebrow { font-family: var(--font-mono); font-size: 13px; color: var(--muted); margin-bottom: 14px; }
+.h2 { font-size: clamp(28px, 3.2vw, 40px); font-weight: 600; letter-spacing: -0.025em; line-height: 1.1; margin-bottom: 20px; }
+.lede { font-size: 19px; color: var(--muted); max-width: 62ch; }
+
+/* Hero */
+.hero h1 { font-size: clamp(40px, 5.6vw, 76px); font-weight: 600; line-height: 1.02; letter-spacing: -0.04em; max-width: 15ch; }
+.hero h1 em { font-style: normal; background: linear-gradient(transparent 62%, var(--accent) 62%); padding: 0 0.06em; }
+.hero .lede { margin-top: 28px; }
+.actions { margin-top: 36px; display: flex; flex-wrap: wrap; gap: 12px; }
+.btn {
+  text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 22px; min-height: 48px; border-radius: 10px; font-weight: 600; font-size: 16px;
+  border: 1px solid var(--line); background: transparent; color: var(--fg); cursor: pointer; font-family: inherit;
+}
+.btn-primary { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.btn:hover { border-color: var(--fg); }
+.facts { margin-top: 52px; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0; border-top: 1px solid var(--line); }
+.fact { padding: 20px 20px 0 0; display: flex; flex-direction: column; gap: 2px; }
+.fact b { font-family: var(--font-display); font-size: 34px; font-weight: 600; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+.fact span { color: var(--muted); font-size: 15px; }
+
+/* Case studies */
+.cases { display: flex; flex-direction: column; gap: 28px; margin-top: 36px; }
+.case { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-wrap: wrap; }
+.case-shot {
+  flex: 1 1 260px; min-height: 220px; background: var(--surface);
+  display: grid; place-items: center; color: var(--muted); padding: 24px; text-align: center;
+}
+.case-body { flex: 999 1 340px; min-width: 0; padding: 28px; display: flex; flex-direction: column; gap: 16px; }
+.case-top { display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: space-between; align-items: baseline; }
+.case h3 { font-size: 23px; font-weight: 600; letter-spacing: -0.015em; line-height: 1.2; }
+.case dl { margin: 0; display: grid; gap: 12px; }
+.case dl div { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 12px; }
+.case dt { font-family: var(--font-mono); font-size: 12px; color: var(--muted); padding-top: 4px; text-transform: uppercase; letter-spacing: 0.06em; }
+.case dd { margin: 0; font-size: 16px; }
+.todo { color: var(--muted); font-style: italic; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { font-family: var(--font-mono); font-size: 12px; background: var(--surface); padding: 4px 9px; border-radius: 6px; }
+.case a.more { color: var(--link); font-weight: 600; text-decoration: none; align-self: flex-start; padding-block: 6px; }
+.case a.more:hover { text-decoration: underline; }
+
+/* Capabilities */
+.caps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0; margin-top: 32px; border-top: 1px solid var(--line); }
+.cap { padding: 24px 24px 24px 0; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 8px; }
+.cap h3 { font-size: 19px; font-weight: 600; }
+.cap p { color: var(--muted); font-size: 16px; }
+
+/* Process */
+.steps { list-style: none; margin: 32px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; counter-reset: step; }
+.steps li { counter-increment: step; background: var(--surface); border-radius: var(--radius); padding: 22px; display: flex; flex-direction: column; gap: 8px; }
+.steps li::before { content: counter(step, decimal-leading-zero); font-family: var(--font-mono); font-size: 12px; color: var(--muted); }
+.steps strong { font-family: var(--font-display); font-size: 18px; font-weight: 600; }
+.steps p { color: var(--muted); font-size: 15px; }
+.ai-note { margin-top: 24px; max-width: 62ch; color: var(--muted); font-size: 16px; }
+
+.terminal {
+  margin-top: 32px; background: var(--code-bg); color: var(--code-fg); border-radius: var(--radius);
+  padding: 22px 24px; font-family: var(--font-mono); font-size: 14px; line-height: 1.9; overflow-x: auto;
+}
+.terminal .p { color: var(--accent); }
+.terminal .c { color: #8C9083; }
+
+/* Experience */
+.timeline { list-style: none; margin: 28px 0 0; padding: 0; display: flex; flex-direction: column; gap: 26px; }
+.timeline li { display: flex; flex-wrap: wrap; gap: 4px 32px; }
+.timeline .when { flex: 0 0 130px; font-family: var(--font-mono); font-size: 13px; color: var(--muted); padding-top: 3px; }
+.timeline .what { flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.timeline .what strong { font-family: var(--font-display); font-size: 18px; font-weight: 600; }
+.timeline .what span { color: var(--muted); }
+
+/* Contact */
+.contact { border-bottom: 0; }
+.contact-card {
+  background: var(--accent); color: var(--on-accent); border-radius: 20px;
+  padding: clamp(28px, 5vw, 56px); display: flex; flex-direction: column; gap: 18px;
+}
+.contact-card h2 { font-size: clamp(32px, 4.4vw, 54px); font-weight: 600; letter-spacing: -0.035em; line-height: 1.04; }
+.contact-card p { font-size: 18px; max-width: 48ch; }
+.email-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.email { font-family: var(--font-mono); font-size: 16px; background: rgba(17,18,16,0.08); padding: 12px 16px; border-radius: 10px; user-select: all; word-break: break-all; }
+.contact-card .btn { border-color: var(--on-accent); color: var(--on-accent); }
+.contact-card .btn-primary { background: var(--on-accent); color: var(--accent); }
+.foot { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; color: var(--muted); }
+.foot a { color: var(--muted); }
+
+/* Phones: sidebar becomes a compact header with a scrollable nav row */
+@media (max-width: 860px) {
+  .shell { gap: 0; }
+  .side { position: static; max-width: none; flex-basis: 100%; padding-block: 32px 8px; gap: 18px; }
+  .side-top { display: flex; align-items: center; gap: 14px; }
+  .nav { flex-direction: row; overflow-x: auto; gap: 8px; border-top: 0; scrollbar-width: none; margin-inline: -4px; padding: 4px; }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav a { border: 1px solid var(--line); border-radius: 999px; padding: 10px 16px; white-space: nowrap; min-height: 44px; }
+  .nav a span { display: none; }
+  .side-meta { display: none; }
+  .main { padding-top: 32px; }
+  section { padding-block: 56px; }
+}
+@media (min-width: 861px) { .side-top { display: flex; flex-direction: column; gap: 20px; } }
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <aside class="side" aria-label="Profile">
+    <div class="side-top">
+      <div class="mark" aria-hidden="true">LR</div>
+      <div class="who">
+        <strong>Lokesh Richards</strong>
+        <span class="muted">Web developer &amp; digital product builder</span>
+      </div>
+    </div>
+    <p class="status">Taking on new projects</p>
+    <nav class="nav" aria-label="Sections">
+      <a href="#intro">Intro <span>01</span></a>
+      <a href="#work">Work <span>02</span></a>
+      <a href="#capabilities">Capabilities <span>03</span></a>
+      <a href="#process">Process <span>04</span></a>
+      <a href="#experience">Experience <span>05</span></a>
+      <a href="#contact">Contact <span>06</span></a>
+    </nav>
+    <div class="side-meta mono">
+      <span>Malaysia · GMT+8</span>
+      <span>Clients in India, Malaysia, USA</span>
+    </div>
+  </aside>
+
+  <main class="main" id="top">
+
+    <section class="hero" id="intro">
+      <p class="eyebrow">Web developer &amp; digital product builder</p>
+      <h1>I build websites and platforms that <em>do real work.</em></h1>
+      <p class="lede">Memberships, video streaming, payments, funnels and apps. I plan, design, build and ship them myself, backed by 13+ years of client work and a background in broadcast television.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#contact">Start a project</a>
+        <a class="btn" href="#work">See the work</a>
+      </div>
+      <div class="facts">
+        <div class="fact"><b>13+</b><span>years of client web work</span></div>
+        <div class="fact"><b>15+</b><span>live projects shipped</span></div>
+        <div class="fact"><b>3</b><span>countries served</span></div>
+      </div>
+    </section>
+
+    <section id="work">
+      <p class="eyebrow">Selected work</p>
+      <h2 class="h2">Platforms, products and the sites that sell them.</h2>
+      <p class="lede">Each project below started with a business problem. Here is what I built and what it changed.</p>
+
+      <div class="cases">
+        <article class="case">
+          <div class="case-shot mono">[Screenshot: streaming library]</div>
+          <div class="case-body">
+            <div class="case-top">
+              <h3>Pay-per-view documentary streaming</h3>
+              <span class="mono muted">Platform</span>
+            </div>
+            <dl>
+              <div><dt>Problem</dt><dd>A documentary series needed to sell episodes online, with viewing access that expires after the rental period.</dd></div>
+              <div><dt>Built</dt><dd>A video rental platform with checkout, time-limited access, customer accounts and protected playback.</dd></div>
+              <div><dt>Outcome</dt><dd class="todo">[Add a result: launch date, rentals, members, or what the client could now do]</dd></div>
+            </dl>
+            <div class="tags"><span class="tag">WordPress</span><span class="tag">WooCommerce</span><span class="tag">Access control</span></div>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="case-shot mono">[Screenshot: SaaS site]</div>
+          <div class="case-body">
+            <div class="case-top">
+              <h3>SaaS product websites</h3>
+              <span class="mono muted">Marketing sites</span>
+            </div>
+            <dl>
+              <div><dt>Problem</dt><dd>Cloud and logistics software companies needed sites that explain complex products and turn visitors into demo requests.</dd></div>
+              <div><dt>Built</dt><dd>Product, pricing and feature pages with custom interactions, lead capture and CRM hand-off.</dd></div>
+              <div><dt>Outcome</dt><dd class="todo">[Add a result: leads, launch, page speed, or client quote]</dd></div>
+            </dl>
+            <div class="tags"><span class="tag">Custom JavaScript</span><span class="tag">Lead capture</span><span class="tag">Integrations</span></div>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="case-shot mono">[Screenshot: marketplace app]</div>
+          <div class="case-body">
+            <div class="case-top">
+              <h3>B2B training marketplace</h3>
+              <span class="mono muted">Product · in development</span>
+            </div>
+            <dl>
+              <div><dt>Problem</dt><dd>Malaysian companies and trainers have no simple place to find, book and claim government-funded workforce training.</dd></div>
+              <div><dt>Role</dt><dd>Working partner building the application, from product structure and user flows to the build itself.</dd></div>
+              <div><dt>Status</dt><dd>In active development.</dd></div>
+            </dl>
+            <div class="tags"><span class="tag">Product</span><span class="tag">Web app</span><span class="tag">Marketplace</span></div>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="case-shot mono">[Screenshot: sdahymn.app]</div>
+          <div class="case-body">
+            <div class="case-top">
+              <h3>sdahymn.app</h3>
+              <span class="mono muted">Personal project</span>
+            </div>
+            <dl>
+              <div><dt>Problem</dt><dd>Singers and worship leaders needed a fast way to find and read hymns on any device.</dd></div>
+              <div><dt>Built</dt><dd>A searchable hymnal web app designed for phones first.</dd></div>
+              <div><dt>Outcome</dt><dd class="todo">[Add a result: users, churches using it, or a feature you are proud of]</dd></div>
+            </dl>
+            <div class="tags"><span class="tag">Web app</span><span class="tag">Search</span></div>
+            <a class="more" href="https://sdahymn.app" rel="noopener">Visit sdahymn.app →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="capabilities">
+      <p class="eyebrow">Capabilities</p>
+      <h2 class="h2">One person across the whole build.</h2>
+      <div class="caps">
+        <div class="cap"><h3>Websites &amp; platforms</h3><p>Business, non-profit and event sites, plus memberships, video rental and online courses.</p></div>
+        <div class="cap"><h3>Product builds</h3><p>Web apps and marketplaces, from user flows and data structure to a working release.</p></div>
+        <div class="cap"><h3>Funnels &amp; integrations</h3><p>Payments, CRM, forms, automation and third-party tools connected end to end.</p></div>
+        <div class="cap"><h3>Design &amp; video</h3><p>Brand identity, interface design, social content and video editing, so the site and its story match.</p></div>
+      </div>
+    </section>
+
+    <section id="process">
+      <p class="eyebrow">Process</p>
+      <h2 class="h2">How a project runs.</h2>
+      <ol class="steps">
+        <li><strong>Plan</strong><p>Goals, users and the simplest structure that does the job.</p></li>
+        <li><strong>Design</strong><p>Layouts and a visual system you approve before any build.</p></li>
+        <li><strong>Build</strong><p>Clean, editable code, version-controlled from day one.</p></li>
+        <li><strong>Ship &amp; support</strong><p>Launch, hosting, handover and ongoing care.</p></li>
+      </ol>
+      <p class="ai-note">I use AI tools to research and build faster. Every architecture decision, integration and line of code that ships is reviewed and owned by me.</p>
+      <div class="terminal" role="img" aria-label="Tools I work with: WordPress, WooCommerce, HTML, CSS, JavaScript, GitHub, Cloudflare, GoHighLevel, Premiere Pro, After Effects, Photoshop and Illustrator.">
+        <div><span class="p">$</span> stack --list</div>
+        <div>web     wordpress  woocommerce  html  css  javascript</div>
+        <div>ship    github  cloudflare</div>
+        <div>grow    gohighlevel  payments  crm</div>
+        <div>media   premiere  after-effects  photoshop  illustrator</div>
+        <div class="c"># this site: hand-coded, versioned on GitHub, deployed on Cloudflare</div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <p class="eyebrow">Experience</p>
+      <h2 class="h2">From the camera to the codebase.</h2>
+      <ol class="timeline">
+        <li><span class="when">Now</span><span class="what"><strong>Media &amp; web lead</strong><span>Video, YouTube, design and web for a US-based ministry and media organisation.</span></span></li>
+        <li><span class="when">Now</span><span class="what"><strong>Product partner</strong><span>Building a B2B training marketplace application in Malaysia.</span></span></li>
+        <li><span class="when">13+ years</span><span class="what"><strong>Independent web developer</strong><span>Websites and platforms for business, SaaS, non-profit, media and membership clients.</span></span></li>
+        <li><span class="when">2012–2018</span><span class="what"><strong>Broadcast television</strong><span>Camera operator, editor, then production coordinator at a national TV network in India.</span></span></li>
+      </ol>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="contact-card">
+        <h2>Have a project in mind?</h2>
+        <p>Tell me what you are building and where it is stuck. I reply within one working day.</p>
+        <div class="email-row">
+          <span class="email" id="email">[YOUR EMAIL]</span>
+          <button class="btn btn-primary" type="button" id="copy-email">Copy email</button>
+        </div>
+      </div>
+      <div class="foot mono">
+        <span>© <span id="year">2026</span> Lokesh Richards</span>
+        <span><a href="#top">LinkedIn</a> · <a href="#top">YouTube</a> · <a href="#top">GitHub</a></span>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+(function () {
+  var y = document.getElementById('year');
+  if (y) y.textContent = String(new Date().getFullYear());
+
+  var btn = document.getElementById('copy-email');
+  var email = document.getElementById('email');
+  if (btn && email) {
+    btn.addEventListener('click', function () {
+      var text = email.textContent.trim();
+      var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy email'; }, 1800); };
+      var fallback = function () {
+        var r = document.createRange(); r.selectNodeContents(email);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        btn.textContent = 'Selected — press copy';
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, fallback);
+      } else { fallback(); }
+    });
+  }
+
+  // Highlight the section in view
+  var links = Array.prototype.slice.call(document.querySelectorAll('.nav a'));
+  if ('IntersectionObserver' in window && links.length) {
+    var map = {};
+    links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && map[e.target.id]) {
+          links.forEach(function (a) { a.classList.remove('is-active'); });
+          map[e.target.id].classList.add('is-active');
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    document.querySelectorAll('main section[id]').forEach(function (s) { io.observe(s); });
+  }
+})();
+</script>
+</body>
+</html>
