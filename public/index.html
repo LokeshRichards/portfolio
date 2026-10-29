@@ -3,11 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Lokesh Richards</title>
+<title>Lokesh Richards — Web Developer for Ministry &amp; Media Platforms</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Lokesh Richards — web developer and digital product builder. Websites and platforms for memberships, video platforms, payments, funnels and apps, plus design and video.">
-<meta property="og:title" content="Lokesh Richards — Web developer & digital product builder">
-<meta property="og:description" content="Websites and platforms that do real work. 13+ years of client projects across India, Malaysia and the USA.">
+<meta name="description" content="Lokesh Richards builds websites and platforms for ministries, media and mission-driven teams: video rental, memberships, church apps, payments and funnels. 13+ years of client work.">
+<link rel="canonical" href="https://lokeshrichards.com/">
+<meta property="og:title" content="Lokesh Richards — Web Developer for Ministry & Media Platforms">
+<meta property="og:description" content="Video rental, memberships, church apps and the sites behind them. 13+ years of client work in India, Malaysia and the USA.">
+<meta property="og:url" content="https://lokeshrichards.com/">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#FBFBF8">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -185,12 +187,11 @@ section:last-of-type { border-bottom: 0; }
 @media (max-width: 860px) { .reel-controls { display: none; } }
 
 /* Capabilities */
-.caps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0; margin-top: 32px; border-top: 1px solid var(--line); }
+.caps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 0; margin-top: 32px; border-top: 1px solid var(--line); }
 .cap { padding: 24px 24px 24px 0; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 8px; }
 .cap h3 { font-size: 19px; font-weight: 600; }
 .cap p { color: var(--muted); font-size: 16px; }
 .inline-link { color: var(--link); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
-#bigger .actions { margin-top: 28px; }
 .tools { margin-top: 48px; }
 .tools-title { font-size: 19px; font-weight: 600; margin-bottom: 16px; }
 .tool-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
@@ -206,12 +207,23 @@ section:last-of-type { border-bottom: 0; }
 .steps p { color: var(--muted); font-size: 15px; }
 .ai-note { margin-top: 24px; max-width: 62ch; color: var(--muted); font-size: 16px; }
 
-.terminal {
-  margin-top: 32px; background: var(--code-bg); color: var(--code-fg); border-radius: var(--radius);
-  padding: 22px 24px; font-family: var(--font-mono); font-size: 14px; line-height: 1.9; overflow-x: auto;
-}
-.terminal .p { color: var(--accent); }
-.terminal .c { color: #8C9083; }
+.partner-note { margin-top: 28px; max-width: 62ch; padding: 18px 22px; border-left: 3px solid var(--accent); background: var(--surface); border-radius: 0 var(--radius) var(--radius) 0; font-size: 16px; }
+.sub-title { font-size: 21px; font-weight: 600; letter-spacing: -0.01em; margin-top: 56px; }
+.sub-title + .steps { margin-top: 20px; }
+
+/* Print piece under the media reel */
+.print { margin-top: 48px; display: flex; flex-wrap: wrap; gap: 24px 32px; align-items: center; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+.print-cover { flex: 0 0 auto; width: 120px; height: auto; border-radius: 6px; box-shadow: 0 6px 20px rgba(17,18,16,0.14); }
+.print-body { flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 8px; }
+.print-body h3 { font-size: 21px; font-weight: 600; letter-spacing: -0.01em; }
+.print-body p:not(.mono) { font-size: 16px; }
+.print .more { color: var(--link); font-weight: 600; text-decoration: none; align-self: flex-start; padding-block: 6px; }
+.print .more:hover { text-decoration: underline; }
+
+/* Contact extras */
+.brief { margin: 4px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px; font-size: 16px; }
+.brief li { padding-left: 18px; position: relative; }
+.brief li::before { content: ""; position: absolute; left: 2px; top: 0.62em; width: 7px; height: 7px; border-radius: 2px; background: var(--on-accent); }
 
 /* Experience */
 .timeline { list-style: none; margin: 28px 0 0; padding: 0; display: flex; flex-direction: column; gap: 26px; }
@@ -267,19 +279,17 @@ section:last-of-type { border-bottom: 0; }
       <div class="mark" aria-hidden="true">LR</div>
       <div class="who">
         <strong>Lokesh Richards</strong>
-        <span class="muted">Web developer &amp; digital product builder</span>
+        <span class="muted">Web developer for ministry &amp; media platforms</span>
       </div>
     </div>
     <p class="status">Taking on new projects</p>
     <nav class="nav" aria-label="Sections">
       <a href="#intro">Intro <span>01</span></a>
       <a href="#work">Work <span>02</span></a>
-      <a href="#media">Media <span>03</span></a>
-      <a href="#bigger">Bigger builds <span>04</span></a>
-      <a href="#capabilities">Capabilities <span>05</span></a>
-      <a href="#process">Process <span>06</span></a>
-      <a href="#about">About <span>07</span></a>
-      <a href="#contact">Contact <span>08</span></a>
+      <a href="#media">Media &amp; design <span>03</span></a>
+      <a href="#services">Services <span>04</span></a>
+      <a href="#about">About <span>05</span></a>
+      <a href="#contact">Contact <span>06</span></a>
     </nav>
     <div class="side-meta mono">
       <span>Malaysia · GMT+8</span>
@@ -290,9 +300,9 @@ section:last-of-type { border-bottom: 0; }
   <main class="main" id="top">
 
     <section class="hero" id="intro">
-      <p class="eyebrow">Web developer &amp; digital product builder</p>
-      <h1>I build websites and platforms that <em>do real work.</em></h1>
-      <p class="lede">Memberships, video platforms, payments, funnels and apps. I plan, design, build and ship them myself, backed by 13+ years of client work and a background in broadcast television.</p>
+      <p class="eyebrow">Web developer for ministry &amp; media platforms</p>
+      <h1>I build platforms for <em>ministries, media</em> and mission&#8209;driven teams.</h1>
+      <p class="lede">Video rental and memberships, church apps, payments and the sites that bring people in. I plan, design, build and ship them myself, with 13+ years of client work and a background in broadcast television.</p>
       <div class="actions">
         <a class="btn btn-primary" href="#contact">Start a project</a>
         <a class="btn" href="#work">See the work</a>
@@ -300,7 +310,7 @@ section:last-of-type { border-bottom: 0; }
       <div class="facts">
         <div class="fact"><b>13+</b><span>years of client web work</span></div>
         <div class="fact"><b>15+</b><span>live projects shipped</span></div>
-        <div class="fact"><b>3</b><span>countries served</span></div>
+        <div class="fact"><b>9M+</b><span>views on videos I've worked on</span></div>
       </div>
     </section>
 
@@ -310,104 +320,6 @@ section:last-of-type { border-bottom: 0; }
       <p class="lede">Every project starts with someone's vision. Here is what each team set out to do, what I made with them, and where it led.</p>
 
       <div class="cases">
-        <article class="case">
-          <img class="case-shot case-img" src="/images/yoga-unboxed.webp" alt="Yoga Unboxed homepage with the season one episode list" width="874" height="487" loading="lazy">
-          <div class="case-body">
-            <div class="case-top">
-              <h3>Yoga Unboxed</h3>
-              <span class="mono muted">Built at The Wisdom Pearl</span>
-            </div>
-            <dl>
-              <div><dt>Vision</dt><dd>Bring a yoga documentary series to viewers everywhere, with episodes they can rent and watch online.</dd></div>
-              <div><dt>What I made</dt><dd>A video rental platform with smooth checkout, time-limited access, customer accounts and protected playback.</dd></div>
-              <div><dt>Impact</dt><dd>The series sells and streams from its own website, with rentals, payments and access handled automatically, without depending on a third-party streaming platform.</dd></div>
-            </dl>
-            <div class="tags"><span class="tag">WordPress</span><span class="tag">WooCommerce</span><span class="tag">Access control</span></div>
-            <a class="more" href="https://yogaunboxed.com" rel="noopener">Visit yogaunboxed.com →</a>
-          </div>
-        </article>
-
-        <article class="case">
-          <img class="case-shot case-img" src="/images/brain-health-site.webp" alt="Brain-health education website homepage" width="1200" height="750" loading="lazy">
-          <div class="case-body">
-            <div class="case-top">
-              <h3>Brain-health education website</h3>
-              <span class="mono muted">USA</span>
-            </div>
-            <dl>
-              <div><dt>About</dt><dd>A brain-health outreach startup founded by a neuroscientist and a psychiatrist.</dd></div>
-              <div><dt>Live now</dt><dd>A launch site that introduces the founders, their approach and what is coming, so they can start building partnerships.</dd></div>
-              <div><dt>Building</dt><dd>I'm building the full site, with a browser-based editor for pages, blog, events and programs. Each edit saves to GitHub and goes live on Cloudflare in about a minute, and the contact form runs on a Cloudflare Worker with spam protection.</dd></div>
-            </dl>
-            <div class="tags"><span class="tag">Astro</span><span class="tag">Git-based CMS</span><span class="tag">Cloudflare Workers</span></div>
-            <a class="more" href="https://neurolamb.com" rel="noopener">Visit neurolamb.com →</a>
-          </div>
-        </article>
-
-        <article class="case">
-          <img class="case-shot case-img" src="/images/raas-cloud.webp" alt="RAAS Cloud homepage" width="1200" height="733" loading="lazy">
-          <div class="case-body">
-            <div class="case-top">
-              <h3>RAAS Cloud</h3>
-              <span class="mono muted">USA</span>
-            </div>
-            <dl>
-              <div><dt>Vision</dt><dd>Help a US software development company present more than 30 services to businesses across every industry it serves, and turn visitors into project enquiries.</dd></div>
-              <div><dt>What I made</dt><dd>A large company website with deep menus for services, hire-a-developer, industries and technologies, plus a portfolio, blog and enquiry forms throughout.</dd></div>
-              <div><dt>Impact</dt><dd>Prospects can find the exact service, industry or technology they need in a few clicks and send a project enquiry from any page.</dd></div>
-            </dl>
-            <div class="tags"><span class="tag">WordPress</span><span class="tag">Elementor</span><span class="tag">Lead capture</span></div>
-            <a class="more" href="https://raascloud.io" rel="noopener">Visit raascloud.io →</a>
-          </div>
-        </article>
-
-        <article class="case">
-          <div class="case-shot case-art" aria-hidden="true">
-            <svg viewBox="0 0 320 200" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
-              <rect x="8" y="8" width="304" height="184" rx="10" fill="var(--bg)" stroke="var(--line)"/>
-              <rect x="8" y="8" width="64" height="184" rx="10" fill="var(--fg)" opacity="0.06"/>
-              <rect x="20" y="24" width="36" height="6" rx="3" fill="var(--fg)" opacity="0.5"/>
-              <rect x="20" y="46" width="40" height="5" rx="2.5" fill="var(--fg)" opacity="0.18"/>
-              <rect x="20" y="60" width="32" height="5" rx="2.5" fill="var(--fg)" opacity="0.18"/>
-              <rect x="20" y="74" width="38" height="5" rx="2.5" fill="var(--fg)" opacity="0.18"/>
-              <rect x="20" y="88" width="30" height="5" rx="2.5" fill="var(--fg)" opacity="0.18"/>
-              <rect x="86" y="24" width="64" height="40" rx="6" fill="var(--accent)"/>
-              <rect x="94" y="34" width="28" height="5" rx="2.5" fill="var(--on-accent)" opacity="0.6"/>
-              <rect x="94" y="46" width="40" height="8" rx="3" fill="var(--on-accent)"/>
-              <rect x="158" y="24" width="64" height="40" rx="6" fill="var(--fg)" opacity="0.06"/>
-              <rect x="166" y="34" width="28" height="5" rx="2.5" fill="var(--fg)" opacity="0.35"/>
-              <rect x="166" y="46" width="36" height="8" rx="3" fill="var(--fg)" opacity="0.55"/>
-              <rect x="230" y="24" width="68" height="40" rx="6" fill="var(--fg)" opacity="0.06"/>
-              <rect x="238" y="34" width="28" height="5" rx="2.5" fill="var(--fg)" opacity="0.35"/>
-              <rect x="238" y="46" width="44" height="8" rx="3" fill="var(--fg)" opacity="0.55"/>
-              <rect x="86" y="76" width="212" height="1" fill="var(--line)"/>
-              <rect x="86" y="88" width="80" height="5" rx="2.5" fill="var(--fg)" opacity="0.4"/>
-              <rect x="250" y="86" width="48" height="10" rx="5" fill="var(--accent)"/>
-              <rect x="86" y="108" width="212" height="1" fill="var(--line)"/>
-              <rect x="86" y="118" width="96" height="5" rx="2.5" fill="var(--fg)" opacity="0.25"/>
-              <rect x="250" y="116" width="48" height="10" rx="5" fill="var(--fg)" opacity="0.12"/>
-              <rect x="86" y="136" width="212" height="1" fill="var(--line)"/>
-              <rect x="86" y="146" width="72" height="5" rx="2.5" fill="var(--fg)" opacity="0.25"/>
-              <rect x="250" y="144" width="48" height="10" rx="5" fill="var(--accent)"/>
-              <rect x="86" y="164" width="212" height="1" fill="var(--line)"/>
-              <rect x="86" y="174" width="88" height="5" rx="2.5" fill="var(--fg)" opacity="0.25"/>
-              <rect x="250" y="172" width="48" height="10" rx="5" fill="var(--fg)" opacity="0.12"/>
-            </svg>
-          </div>
-          <div class="case-body">
-            <div class="case-top">
-              <h3>Training operations platform</h3>
-              <span class="mono muted">Product · in development</span>
-            </div>
-            <dl>
-              <div><dt>Vision</dt><dd>Give a growing Malaysian training company one place to run its programs and government-funded training claims.</dd></div>
-              <div><dt>Building</dt><dd>I'm building an internal system (ERP) that runs the business end to end, working as a partner on the product, from structure and user flows to delivery.</dd></div>
-              <div><dt>Stage</dt><dd>In active development.</dd></div>
-            </dl>
-            <div class="tags"><span class="tag">ERP</span><span class="tag">Web app</span><span class="tag">Product</span></div>
-          </div>
-        </article>
-
         <article class="case">
           <img class="case-shot case-img" src="/images/tamil-hymnal-app.webp" alt="Tamil hymnal app on two phones: a hymn in Tamil with English transliteration, and the home screen" width="1440" height="810" loading="lazy">
           <div class="case-body">
@@ -434,20 +346,55 @@ section:last-of-type { border-bottom: 0; }
             </div>
           </div>
         </article>
+
         <article class="case">
-          <img class="case-shot case-img case-img-contain" src="/images/quality-life-cover.webp" alt="Cover of How to Have a Quality Life by Martin Raj" width="524" height="812" loading="lazy">
+          <img class="case-shot case-img" src="/images/yoga-unboxed.webp" alt="Yoga Unboxed homepage with the season one episode list" width="874" height="487" loading="lazy">
           <div class="case-body">
             <div class="case-top">
-              <h3>How to Have a Quality Life</h3>
-              <span class="mono muted">Print book · 2024</span>
+              <h3>Yoga Unboxed</h3>
+              <span class="mono muted">Built at The Wisdom Pearl</span>
             </div>
             <dl>
-              <div><dt>Vision</dt><dd>Turn author Martin Raj's manuscript into a beautiful book, ready for readers and for print.</dd></div>
-              <div><dt>What I made</dt><dd>The cover design and the complete interior layout and typography, prepared to printer specifications. Credited in the book.</dd></div>
-              <div><dt>Impact</dt><dd>Published and on sale on Amazon.</dd></div>
+              <div><dt>Vision</dt><dd>Bring a yoga documentary series to viewers everywhere, with episodes they can rent and watch online.</dd></div>
+              <div><dt>What I made</dt><dd>A video rental platform with smooth checkout, time-limited access, customer accounts and protected playback.</dd></div>
+              <div><dt>Impact</dt><dd>The series earns from its own website. Viewers rent, pay and watch in one place, access expires on schedule with no one managing it, and no streaming platform sits between the film and its audience.</dd></div>
             </dl>
-            <div class="tags"><span class="tag">InDesign</span><span class="tag">Illustrator</span><span class="tag">Print production</span></div>
-            <a class="more" href="https://www.amazon.com/dp/B0DFWJHLSJ" rel="noopener">View on Amazon →</a>
+            <div class="tags"><span class="tag">WordPress</span><span class="tag">WooCommerce</span><span class="tag">Access control</span></div>
+            <a class="more" href="https://yogaunboxed.com" rel="noopener">Visit yogaunboxed.com →</a>
+          </div>
+        </article>
+
+        <article class="case">
+          <img class="case-shot case-img" src="/images/brain-health-site.webp" alt="Brain-health education website homepage" width="1200" height="750" loading="lazy">
+          <div class="case-body">
+            <div class="case-top">
+              <h3>Brain-health education website</h3>
+              <span class="mono muted">USA</span>
+            </div>
+            <dl>
+              <div><dt>About</dt><dd>A brain-health outreach startup founded by a neuroscientist and a psychiatrist.</dd></div>
+              <div><dt>Live now</dt><dd>A launch site that introduces the founders, their approach and what is coming, so they can start building partnerships.</dd></div>
+              <div><dt>Building</dt><dd>The full site, with a browser-based editor for pages, blog, events and programs. Each edit saves to GitHub and goes live on Cloudflare in about a minute, and the contact form runs on a Cloudflare Worker with spam protection.</dd></div>
+            </dl>
+            <div class="tags"><span class="tag">Astro</span><span class="tag">Git-based CMS</span><span class="tag">Cloudflare Workers</span></div>
+            <a class="more" href="https://neurolamb.com" rel="noopener">Visit neurolamb.com →</a>
+          </div>
+        </article>
+
+        <article class="case">
+          <img class="case-shot case-img" src="/images/raas-cloud.webp" alt="RAAS Cloud homepage" width="1200" height="733" loading="lazy">
+          <div class="case-body">
+            <div class="case-top">
+              <h3>RAAS Cloud</h3>
+              <span class="mono muted">USA</span>
+            </div>
+            <dl>
+              <div><dt>Vision</dt><dd>Help a US software development company present more than 30 services to businesses across every industry it serves, and turn visitors into project enquiries.</dd></div>
+              <div><dt>What I made</dt><dd>A large company website with deep menus for services, hire-a-developer, industries and technologies, plus a portfolio, blog and enquiry forms throughout.</dd></div>
+              <div><dt>Impact</dt><dd>Every service, industry and technology has its own page with an enquiry form in reach, so the site works as a sales tool rather than a brochure.</dd></div>
+            </dl>
+            <div class="tags"><span class="tag">WordPress</span><span class="tag">Elementor</span><span class="tag">Lead capture</span></div>
+            <a class="more" href="https://raascloud.io" rel="noopener">Visit raascloud.io →</a>
           </div>
         </article>
       </div>
@@ -456,7 +403,7 @@ section:last-of-type { border-bottom: 0; }
     <section id="media">
       <div class="media-head">
         <div>
-          <p class="eyebrow">Media</p>
+          <p class="eyebrow">Media &amp; design</p>
           <h2 class="h2">Videos I've worked on.</h2>
           <p class="lede">Gospel music videos, album promos and ministry films. The 34 videos in my reel have over 9 million combined views on YouTube. Here is a production I made from start to finish, followed by the ten most watched.</p>
         </div>
@@ -467,42 +414,45 @@ section:last-of-type { border-bottom: 0; }
       </div>
       <ul class="reel" id="reel" tabindex="0" aria-label="Edited videos, scroll sideways"></ul>
       <a class="more-link" href="https://www.youtube.com/playlist?list=PL5u4CZRy0GqUJxUz1UADCGXnhByv3ufkH" rel="noopener">See all 34 videos on YouTube →</a>
-    </section>
 
-    <section id="bigger">
-      <p class="eyebrow">Bigger builds</p>
-      <h2 class="h2">ERP systems, apps and custom software, with a full team.</h2>
-      <p class="lede">For projects bigger than one person, I lead a dedicated development team based in India. You get the muscle of a full engineering team with the care of one person who knows your project inside out, from the first sketch to launch day and beyond.</p>
-      <div class="caps">
-        <div class="cap"><h3>ERP &amp; business systems</h3><p>Internal tools that run operations, from records and workflows to reporting and approvals.</p></div>
-        <div class="cap"><h3>Mobile apps</h3><p>Apps for iOS and Android, designed alongside the web and admin tools they connect to.</p></div>
-        <div class="cap"><h3>Web applications &amp; SaaS</h3><p>Customer portals, dashboards and subscription products built to grow.</p></div>
-        <div class="cap"><h3>Custom software &amp; integrations</h3><p>CRM such as Salesforce and Zoho, automation, AI features and connections between your systems.</p></div>
-      </div>
-      <ol class="steps">
-        <li><strong>Talk to me</strong><p>One person who answers, from the first call to launch.</p></li>
-        <li><strong>Shape it together</strong><p>Scope, user flows and screens agreed before development starts.</p></li>
-        <li><strong>We build</strong><p>My team develops and tests while I manage the work, with progress you can see.</p></li>
-        <li><strong>Launch &amp; support</strong><p>I manage delivery, handover and ongoing improvements.</p></li>
-      </ol>
-      <div class="actions">
-        <a class="btn btn-primary" href="#contact">Discuss a bigger project</a>
+      <div class="print">
+        <img class="print-cover" src="/images/quality-life-cover.webp" alt="Cover of How to Have a Quality Life by Martin Raj" width="524" height="812" loading="lazy">
+        <div class="print-body">
+          <p class="mono muted">Print design · 2024</p>
+          <h3>How to Have a Quality Life</h3>
+          <p class="muted">Cover design, interior layout and typography for Martin Raj's book, prepared to printer specifications. Credited in the book and on sale on Amazon.</p>
+          <a class="more" href="https://www.amazon.com/dp/B0DFWJHLSJ" rel="noopener">View on Amazon →</a>
+        </div>
       </div>
     </section>
 
-    <section id="capabilities">
-      <p class="eyebrow">Capabilities</p>
+    <section id="services">
+      <p class="eyebrow">Services</p>
       <h2 class="h2">One person across the whole build.</h2>
       <div class="caps">
-        <div class="cap"><h3>Websites &amp; platforms</h3><p>Business, non-profit and event sites, plus memberships, video rental and online courses.</p></div>
-        <div class="cap"><h3>Product builds</h3><p>Web apps and marketplaces, from user flows and data structure to a working release.</p></div>
-        <div class="cap"><h3>Funnels &amp; integrations</h3><p>Payments, CRM, forms, automation and third-party tools connected end to end.</p></div>
-        <div class="cap"><h3>Design &amp; video</h3><p>Brand identity, book and print layout, interface design, social content and video editing, so the site and its story match.</p></div>
+        <div class="cap"><h3>Ministry &amp; media platforms</h3><p>Video rental and pay-per-view, memberships, online courses and church tools such as song projection and service lists.</p></div>
+        <div class="cap"><h3>Websites that bring people in</h3><p>Sites for organisations, non-profits, events and companies, built to turn visitors into enquiries, sign-ups or donations.</p></div>
+        <div class="cap"><h3>Payments, funnels &amp; integrations</h3><p>Checkout, CRM, forms and automation connected end to end, in WordPress, GoHighLevel or custom code.</p></div>
+        <div class="cap"><h3>Design &amp; video</h3><p>Interface design, brand and print work, social content and video editing, so the site and its story match.</p></div>
       </div>
+      <p class="partner-note">For builds bigger than one person, such as ERP systems or mobile apps, I work with a partner development team in India and stay your single point of contact. We're currently building an operations platform for a Malaysian training company together.</p>
+
+      <h3 class="sub-title">How a project runs</h3>
+      <ol class="steps">
+        <li><strong>Plan</strong><p>Goals, users and the simplest structure that does the job.</p></li>
+        <li><strong>Design</strong><p>Layouts and a visual system you approve before any build.</p></li>
+        <li><strong>Build</strong><p>Clean, editable code, version-controlled from day one.</p></li>
+        <li><strong>Ship &amp; support</strong><p>Launch, hosting, handover and ongoing care.</p></li>
+      </ol>
+      <p class="ai-note">I use AI tools to research and build faster. Every architecture decision, integration and line of code that ships is reviewed and owned by me. This site is hand-coded, versioned on GitHub and deployed on Cloudflare.</p>
 
       <div class="tools">
         <h3 class="tools-title">Tools I work in</h3>
         <div class="tool-groups">
+          <div class="tool-group">
+            <p class="mono muted">Web &amp; platforms</p>
+            <ul><li>WordPress &amp; WooCommerce</li><li>Astro, HTML, CSS, JavaScript</li><li>GitHub &amp; Cloudflare Workers</li><li>GoHighLevel</li></ul>
+          </div>
           <div class="tool-group">
             <p class="mono muted">Video editing &amp; motion</p>
             <ul><li>Final Cut Pro</li><li>DaVinci Resolve</li><li>Adobe Premiere Pro</li><li>Adobe After Effects</li></ul>
@@ -511,30 +461,7 @@ section:last-of-type { border-bottom: 0; }
             <p class="mono muted">Design &amp; print</p>
             <ul><li>Adobe InDesign</li><li>Adobe Illustrator</li><li>Adobe Photoshop</li></ul>
           </div>
-          <div class="tool-group">
-            <p class="mono muted">Web &amp; platforms</p>
-            <ul><li>WordPress &amp; WooCommerce</li><li>Astro, HTML, CSS, JavaScript</li><li>GitHub &amp; Cloudflare</li><li>GoHighLevel</li></ul>
-          </div>
         </div>
-      </div>
-    </section>
-
-    <section id="process">
-      <p class="eyebrow">Process</p>
-      <h2 class="h2">How a project runs.</h2>
-      <ol class="steps">
-        <li><strong>Plan</strong><p>Goals, users and the simplest structure that does the job.</p></li>
-        <li><strong>Design</strong><p>Layouts and a visual system you approve before any build.</p></li>
-        <li><strong>Build</strong><p>Clean, editable code, version-controlled from day one.</p></li>
-        <li><strong>Ship &amp; support</strong><p>Launch, hosting, handover and ongoing care.</p></li>
-      </ol>
-      <p class="ai-note">I use AI tools to research and build faster. Every architecture decision, integration and line of code that ships is reviewed and owned by me.</p>
-      <div class="terminal" role="img" aria-label="Web stack: WordPress, WooCommerce, Astro, HTML, CSS, JavaScript, GitHub, Cloudflare Workers, a Git-based CMS and GoHighLevel. This site is hand-coded, versioned on GitHub and deployed on Cloudflare.">
-        <div><span class="p">$</span> stack --list</div>
-        <div>web     wordpress  woocommerce  astro  html  css  javascript</div>
-        <div>ship    github  cloudflare-workers  git-based-cms</div>
-        <div>grow    gohighlevel  payments  crm</div>
-        <div class="c"># this site: hand-coded, versioned on GitHub, deployed on Cloudflare</div>
       </div>
     </section>
 
@@ -551,7 +478,7 @@ section:last-of-type { border-bottom: 0; }
       </div>
       <ol class="timeline">
         <li><span class="when">Now</span><span class="what"><strong>Media &amp; web lead</strong><span>Video, YouTube, design and web at The Wisdom Pearl, a US-based ministry and media organisation.</span></span></li>
-        <li><span class="when">Now</span><span class="what"><strong>Product partner</strong><span>Building an operations platform for a training company in Malaysia, and leading larger software projects with a development team in India.</span></span></li>
+        <li><span class="when">Now</span><span class="what"><strong>Product partner</strong><span>Building an operations platform for a training company in Malaysia, with a partner development team in India.</span></span></li>
         <li><span class="when">13+ years</span><span class="what"><strong>Independent web developer</strong><span>Websites and platforms for business, SaaS, non-profit, media and membership clients.</span></span></li>
         <li><span class="when">2012–2018</span><span class="what"><strong>Broadcast television</strong><span>Camera operator, editor, then production coordinator at a national TV network in India.</span></span></li>
       </ol>
@@ -560,15 +487,20 @@ section:last-of-type { border-bottom: 0; }
     <section id="contact" class="contact">
       <div class="contact-card">
         <h2>Have a project in mind?</h2>
-        <p>Tell me what you are building and where it is stuck. I reply within one working day.</p>
+        <p>Tell me what you are building and where it is stuck. I reply within one working day. It helps to include:</p>
+        <ul class="brief">
+          <li>What you're building and who it's for</li>
+          <li>Any site or platform you already have</li>
+          <li>Your timeline and rough budget</li>
+        </ul>
         <div class="email-row">
-          <a class="email" id="email" href="mailto:hello@lokeshrichards.com">hello@lokeshrichards.com</a>
+          <a class="email" id="email" href="mailto:hello@lokeshrichards.com?subject=New%20project%20enquiry">hello@lokeshrichards.com</a>
           <button class="btn btn-primary" type="button" id="copy-email">Copy email</button>
         </div>
       </div>
       <div class="foot mono">
         <span>© <span id="year">2026</span> Lokesh Richards</span>
-        <span><a href="#top">LinkedIn</a> · <a href="#top">YouTube</a> · <a href="#top">GitHub</a></span>
+        <span><a href="https://www.youtube.com/playlist?list=PL5u4CZRy0GqUJxUz1UADCGXnhByv3ufkH" rel="noopener">YouTube</a> · <a href="https://github.com/LokeshRichards" rel="noopener">GitHub</a></span>
       </div>
     </section>
 
