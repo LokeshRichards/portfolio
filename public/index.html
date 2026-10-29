@@ -147,6 +147,12 @@ section:last-of-type { border-bottom: 0; }
 .cap { padding: 24px 24px 24px 0; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 8px; }
 .cap h3 { font-size: 19px; font-weight: 600; }
 .cap p { color: var(--muted); font-size: 16px; }
+.tools { margin-top: 48px; }
+.tools-title { font-size: 19px; font-weight: 600; margin-bottom: 16px; }
+.tool-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+.tool-group { background: var(--surface); border-radius: var(--radius); padding: 20px 22px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.tool-group ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.tool-group li { font-weight: 500; }
 
 /* Process */
 .steps { list-style: none; margin: 32px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; counter-reset: step; }
@@ -339,6 +345,22 @@ section:last-of-type { border-bottom: 0; }
             </div>
           </div>
         </article>
+        <article class="case">
+          <div class="case-shot mono">[Photo: book cover and spread]</div>
+          <div class="case-body">
+            <div class="case-top">
+              <h3>How to Have a Quality Life</h3>
+              <span class="mono muted">Print book · on sale</span>
+            </div>
+            <dl>
+              <div><dt>Brief</dt><dd>Take a finished manuscript and turn it into a book that reads well and is ready for commercial printing.</dd></div>
+              <div><dt>Built</dt><dd>The complete print design: cover, interior layout and typography, prepared to printer specifications.</dd></div>
+              <div><dt>Outcome</dt><dd>Published and on sale on Amazon.</dd></div>
+            </dl>
+            <div class="tags"><span class="tag">InDesign</span><span class="tag">Illustrator</span><span class="tag">Print production</span></div>
+            <a class="more" href="https://www.amazon.com/dp/B0DFWJHLSJ" rel="noopener">View on Amazon →</a>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -349,7 +371,25 @@ section:last-of-type { border-bottom: 0; }
         <div class="cap"><h3>Websites &amp; platforms</h3><p>Business, non-profit and event sites, plus memberships, video rental and online courses.</p></div>
         <div class="cap"><h3>Product builds</h3><p>Web apps and marketplaces, from user flows and data structure to a working release.</p></div>
         <div class="cap"><h3>Funnels &amp; integrations</h3><p>Payments, CRM, forms, automation and third-party tools connected end to end.</p></div>
-        <div class="cap"><h3>Design &amp; video</h3><p>Brand identity, interface design, social content and video editing, so the site and its story match.</p></div>
+        <div class="cap"><h3>Design &amp; video</h3><p>Brand identity, book and print layout, interface design, social content and video editing, so the site and its story match.</p></div>
+      </div>
+
+      <div class="tools">
+        <h3 class="tools-title">Tools I work in</h3>
+        <div class="tool-groups">
+          <div class="tool-group">
+            <p class="mono muted">Video editing &amp; motion</p>
+            <ul><li>Final Cut Pro</li><li>DaVinci Resolve</li><li>Adobe Premiere Pro</li><li>Adobe After Effects</li></ul>
+          </div>
+          <div class="tool-group">
+            <p class="mono muted">Design &amp; print</p>
+            <ul><li>Adobe InDesign</li><li>Adobe Illustrator</li><li>Adobe Photoshop</li></ul>
+          </div>
+          <div class="tool-group">
+            <p class="mono muted">Web &amp; platforms</p>
+            <ul><li>WordPress &amp; WooCommerce</li><li>Astro, HTML, CSS, JavaScript</li><li>GitHub &amp; Cloudflare</li><li>GoHighLevel</li></ul>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -363,12 +403,11 @@ section:last-of-type { border-bottom: 0; }
         <li><strong>Ship &amp; support</strong><p>Launch, hosting, handover and ongoing care.</p></li>
       </ol>
       <p class="ai-note">I use AI tools to research and build faster. Every architecture decision, integration and line of code that ships is reviewed and owned by me.</p>
-      <div class="terminal" role="img" aria-label="Tools I work with: WordPress, WooCommerce, HTML, CSS, JavaScript, Astro, GitHub, Cloudflare Workers, Git-based CMS, GoHighLevel, Premiere Pro, After Effects, Photoshop and Illustrator.">
+      <div class="terminal" role="img" aria-label="Web stack: WordPress, WooCommerce, Astro, HTML, CSS, JavaScript, GitHub, Cloudflare Workers, a Git-based CMS and GoHighLevel. This site is hand-coded, versioned on GitHub and deployed on Cloudflare.">
         <div><span class="p">$</span> stack --list</div>
         <div>web     wordpress  woocommerce  astro  html  css  javascript</div>
         <div>ship    github  cloudflare-workers  git-based-cms</div>
         <div>grow    gohighlevel  payments  crm</div>
-        <div>media   premiere  after-effects  photoshop  illustrator</div>
         <div class="c"># this site: hand-coded, versioned on GitHub, deployed on Cloudflare</div>
       </div>
     </section>
