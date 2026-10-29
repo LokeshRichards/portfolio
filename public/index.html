@@ -140,6 +140,7 @@ section:last-of-type { border-bottom: 0; }
 .tag { font-family: var(--font-mono); font-size: 12px; background: var(--surface); padding: 4px 9px; border-radius: 6px; }
 .case a.more { color: var(--link); font-weight: 600; text-decoration: none; align-self: flex-start; padding-block: 6px; }
 .case a.more:hover { text-decoration: underline; }
+.links { display: flex; flex-wrap: wrap; gap: 4px 24px; }
 
 /* Capabilities */
 .caps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0; margin-top: 32px; border-top: 1px solid var(--line); }
@@ -267,6 +268,22 @@ section:last-of-type { border-bottom: 0; }
         </article>
 
         <article class="case">
+          <div class="case-shot mono">[Screenshot: startup homepage]</div>
+          <div class="case-body">
+            <div class="case-top">
+              <h3>Health-education startup website</h3>
+              <span class="mono muted">Client · pre-launch</span>
+            </div>
+            <dl>
+              <div><dt>Problem</dt><dd>The founders needed a fast, credible site they could update themselves, without paying a developer for every change, and a contact form that stays free of spam.</dd></div>
+              <div><dt>Built</dt><dd>A static site with a browser-based editor for pages, blog, events, programs and team bios. Each edit is saved to GitHub and goes live on Cloudflare in about a minute. The contact form runs on a Cloudflare Worker with bot verification and email delivery.</dd></div>
+              <div><dt>Status</dt><dd>Built and in client review before launch.</dd></div>
+            </dl>
+            <div class="tags"><span class="tag">Astro</span><span class="tag">Git-based CMS</span><span class="tag">Cloudflare Workers</span><span class="tag">Turnstile</span><span class="tag">Resend</span></div>
+          </div>
+        </article>
+
+        <article class="case">
           <div class="case-shot mono">[Screenshot: SaaS site]</div>
           <div class="case-body">
             <div class="case-top">
@@ -299,19 +316,22 @@ section:last-of-type { border-bottom: 0; }
         </article>
 
         <article class="case">
-          <div class="case-shot mono">[Screenshot: sdahymn.app]</div>
+          <div class="case-shot mono">[Screenshot: hymnal web app]</div>
           <div class="case-body">
             <div class="case-top">
-              <h3>sdahymn.app</h3>
-              <span class="mono muted">Personal project</span>
+              <h3>Hymnal web app</h3>
+              <span class="mono muted">Personal product</span>
             </div>
             <dl>
               <div><dt>Problem</dt><dd>Singers and worship leaders needed a fast way to find and read hymns on any device.</dd></div>
-              <div><dt>Built</dt><dd>A searchable hymnal web app designed for phones first.</dd></div>
+              <div><dt>Built</dt><dd>A searchable, phone-first hymnal that runs in the browser and installs on Windows through the Microsoft Store.</dd></div>
               <div><dt>Outcome</dt><dd class="todo">[Add a result: users, churches using it, or a feature you are proud of]</dd></div>
             </dl>
-            <div class="tags"><span class="tag">Web app</span><span class="tag">Search</span></div>
-            <a class="more" href="https://sdahymn.app" rel="noopener">Visit sdahymn.app →</a>
+            <div class="tags"><span class="tag">Web app</span><span class="tag">Microsoft Store</span><span class="tag">Search</span></div>
+            <div class="links">
+              <a class="more" href="https://sdahymn.app" rel="noopener">Open the web app →</a>
+              <a class="more" href="[MICROSOFT STORE LINK]" rel="noopener">Get it on Microsoft Store →</a>
+            </div>
           </div>
         </article>
       </div>
@@ -338,10 +358,10 @@ section:last-of-type { border-bottom: 0; }
         <li><strong>Ship &amp; support</strong><p>Launch, hosting, handover and ongoing care.</p></li>
       </ol>
       <p class="ai-note">I use AI tools to research and build faster. Every architecture decision, integration and line of code that ships is reviewed and owned by me.</p>
-      <div class="terminal" role="img" aria-label="Tools I work with: WordPress, WooCommerce, HTML, CSS, JavaScript, GitHub, Cloudflare, GoHighLevel, Premiere Pro, After Effects, Photoshop and Illustrator.">
+      <div class="terminal" role="img" aria-label="Tools I work with: WordPress, WooCommerce, HTML, CSS, JavaScript, Astro, GitHub, Cloudflare Workers, Git-based CMS, GoHighLevel, Premiere Pro, After Effects, Photoshop and Illustrator.">
         <div><span class="p">$</span> stack --list</div>
-        <div>web     wordpress  woocommerce  html  css  javascript</div>
-        <div>ship    github  cloudflare</div>
+        <div>web     wordpress  woocommerce  astro  html  css  javascript</div>
+        <div>ship    github  cloudflare-workers  git-based-cms</div>
         <div>grow    gohighlevel  payments  crm</div>
         <div>media   premiere  after-effects  photoshop  illustrator</div>
         <div class="c"># this site: hand-coded, versioned on GitHub, deployed on Cloudflare</div>
