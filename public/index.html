@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Lokesh Richards</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Lokesh Richards — web developer and digital product builder. Websites and platforms for memberships, streaming, payments, funnels and apps, plus design and video.">
+<meta name="description" content="Lokesh Richards — web developer and digital product builder. Websites and platforms for memberships, video platforms, payments, funnels and apps, plus design and video.">
 <meta property="og:title" content="Lokesh Richards — Web developer & digital product builder">
 <meta property="og:description" content="Websites and platforms that do real work. 13+ years of client projects across India, Malaysia and the USA.">
 <meta property="og:type" content="website">
@@ -210,7 +210,7 @@ section:last-of-type { border-bottom: 0; }
 .contact-card h2 { font-size: clamp(32px, 4.4vw, 54px); font-weight: 600; letter-spacing: -0.035em; line-height: 1.04; }
 .contact-card p { font-size: 18px; max-width: 48ch; }
 .email-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
-.email { font-family: var(--font-mono); font-size: 16px; background: rgba(17,18,16,0.08); padding: 12px 16px; border-radius: 10px; user-select: all; word-break: break-all; }
+.email { color: inherit; text-decoration: none; font-family: var(--font-mono); font-size: 16px; background: rgba(17,18,16,0.08); padding: 12px 16px; border-radius: 10px; user-select: all; word-break: break-all; }
 .contact-card .btn { border-color: var(--on-accent); color: var(--on-accent); }
 .contact-card .btn-primary { background: var(--on-accent); color: var(--accent); }
 .foot { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; color: var(--muted); }
@@ -269,7 +269,7 @@ section:last-of-type { border-bottom: 0; }
     <section class="hero" id="intro">
       <p class="eyebrow">Web developer &amp; digital product builder</p>
       <h1>I build websites and platforms that <em>do real work.</em></h1>
-      <p class="lede">Memberships, video streaming, payments, funnels and apps. I plan, design, build and ship them myself, backed by 13+ years of client work and a background in broadcast television.</p>
+      <p class="lede">Memberships, video platforms, payments, funnels and apps. I plan, design, build and ship them myself, backed by 13+ years of client work and a background in broadcast television.</p>
       <div class="actions">
         <a class="btn btn-primary" href="#contact">Start a project</a>
         <a class="btn" href="#work">See the work</a>
@@ -287,38 +287,6 @@ section:last-of-type { border-bottom: 0; }
       <p class="lede">Each project below started with a business problem. Here is what I built and what it changed.</p>
 
       <div class="cases">
-        <article class="case">
-          <div class="case-shot mono">[Screenshot: streaming library]</div>
-          <div class="case-body">
-            <div class="case-top">
-              <h3>Pay-per-view documentary streaming</h3>
-              <span class="mono muted">Platform</span>
-            </div>
-            <dl>
-              <div><dt>Problem</dt><dd>A documentary series needed to sell episodes online, with viewing access that expires after the rental period.</dd></div>
-              <div><dt>Built</dt><dd>A video rental platform with checkout, time-limited access, customer accounts and protected playback.</dd></div>
-              <div><dt>Outcome</dt><dd class="todo">[Add a result: launch date, rentals, members, or what the client could now do]</dd></div>
-            </dl>
-            <div class="tags"><span class="tag">WordPress</span><span class="tag">WooCommerce</span><span class="tag">Access control</span></div>
-          </div>
-        </article>
-
-        <article class="case">
-          <div class="case-shot mono">[Screenshot: startup homepage]</div>
-          <div class="case-body">
-            <div class="case-top">
-              <h3>Health-education startup website</h3>
-              <span class="mono muted">Client · pre-launch</span>
-            </div>
-            <dl>
-              <div><dt>Problem</dt><dd>The founders needed a fast, credible site they could update themselves, without paying a developer for every change, and a contact form that stays free of spam.</dd></div>
-              <div><dt>Built</dt><dd>A static site with a browser-based editor for pages, blog, events, programs and team bios. Each edit is saved to GitHub and goes live on Cloudflare in about a minute. The contact form runs on a Cloudflare Worker with bot verification and email delivery.</dd></div>
-              <div><dt>Status</dt><dd>Built and in client review before launch.</dd></div>
-            </dl>
-            <div class="tags"><span class="tag">Astro</span><span class="tag">Git-based CMS</span><span class="tag">Cloudflare Workers</span><span class="tag">Turnstile</span><span class="tag">Resend</span></div>
-          </div>
-        </article>
-
         <article class="case">
           <div class="case-shot mono">[Screenshot: SaaS site]</div>
           <div class="case-body">
@@ -469,7 +437,7 @@ section:last-of-type { border-bottom: 0; }
         <h2>Have a project in mind?</h2>
         <p>Tell me what you are building and where it is stuck. I reply within one working day.</p>
         <div class="email-row">
-          <span class="email" id="email">[YOUR EMAIL]</span>
+          <a class="email" id="email" href="mailto:richardslokesh@gmail.com">richardslokesh@gmail.com</a>
           <button class="btn btn-primary" type="button" id="copy-email">Copy email</button>
         </div>
       </div>
