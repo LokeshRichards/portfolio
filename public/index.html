@@ -134,7 +134,7 @@ section:last-of-type { border-bottom: 0; }
 .case-top { display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: space-between; align-items: baseline; }
 .case h3 { font-size: 23px; font-weight: 600; letter-spacing: -0.015em; line-height: 1.2; }
 .case dl { margin: 0; display: grid; gap: 12px; }
-.case dl div { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 12px; }
+.case dl div { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 12px; }
 .case dt { font-family: var(--font-mono); font-size: 12px; color: var(--muted); padding-top: 4px; text-transform: uppercase; letter-spacing: 0.06em; }
 .case dd { margin: 0; font-size: 16px; }
 .todo { color: var(--muted); font-style: italic; }
@@ -231,6 +231,8 @@ section:last-of-type { border-bottom: 0; }
   .main { padding-top: 32px; }
   section { padding-block: 56px; }
   .hero .eyebrow { display: none; }
+  .case dl div { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .case-body { padding: 22px; }
   .facts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .fact { padding-right: 12px; }
   .fact b { font-size: 28px; }
@@ -286,7 +288,7 @@ section:last-of-type { border-bottom: 0; }
     <section id="work">
       <p class="eyebrow">Selected work</p>
       <h2 class="h2">Platforms, products and the sites that sell them.</h2>
-      <p class="lede">Each project below started with a business problem. Here is what I built and what it changed.</p>
+      <p class="lede">Every project starts with someone's vision. Here is what each team set out to do, what I made with them, and where it led.</p>
 
       <div class="cases">
         <article class="case">
@@ -297,9 +299,9 @@ section:last-of-type { border-bottom: 0; }
               <span class="mono muted">Built at The Wisdom Pearl</span>
             </div>
             <dl>
-              <div><dt>Problem</dt><dd>A yoga documentary series needed to sell episodes online, with viewing access that expires after the rental period.</dd></div>
-              <div><dt>Built</dt><dd>A video rental platform with checkout, time-limited access, customer accounts and protected playback.</dd></div>
-              <div><dt>Outcome</dt><dd class="todo">[Add a result: launch date, rentals, members, or what the team could now do]</dd></div>
+              <div><dt>Vision</dt><dd>Bring a yoga documentary series to viewers everywhere, with episodes they can rent and watch online.</dd></div>
+              <div><dt>What I made</dt><dd>A video rental platform with smooth checkout, time-limited access, customer accounts and protected playback.</dd></div>
+              <div><dt>Impact</dt><dd class="todo">[Add a result: launch date, rentals, members, or what the team could now do]</dd></div>
             </dl>
             <div class="tags"><span class="tag">WordPress</span><span class="tag">WooCommerce</span><span class="tag">Access control</span></div>
             <a class="more" href="https://yogaunboxed.com" rel="noopener">Visit yogaunboxed.com →</a>
@@ -314,9 +316,9 @@ section:last-of-type { border-bottom: 0; }
               <span class="mono muted">USA</span>
             </div>
             <dl>
-              <div><dt>About</dt><dd>A brain-health outreach startup founded by a neuroscientist and a psychiatrist.</dd></div>
-              <div><dt>Live now</dt><dd>A launch site that introduces the founders, their approach and what is coming, so they can start building partnerships.</dd></div>
-              <div><dt>In build</dt><dd>The full site, with a browser-based editor for pages, blog, events and programs. Edits save to GitHub and go live on Cloudflare in about a minute, and the contact form runs on a Cloudflare Worker with spam protection.</dd></div>
+              <div><dt>Vision</dt><dd>A neuroscientist and a psychiatrist launching an outreach mission for lasting brain health.</dd></div>
+              <div><dt>Live now</dt><dd>A launch site that introduces the founders, their approach and what is coming, opening the door to new partners.</dd></div>
+              <div><dt>Coming next</dt><dd>The full site, with a browser-based editor for pages, blog, events and programs. Edits save to GitHub and go live on Cloudflare in about a minute, and the contact form runs on a Cloudflare Worker with spam protection.</dd></div>
             </dl>
             <div class="tags"><span class="tag">Astro</span><span class="tag">Git-based CMS</span><span class="tag">Cloudflare Workers</span></div>
             <a class="more" href="https://neurolamb.com" rel="noopener">Visit neurolamb.com →</a>
@@ -331,9 +333,9 @@ section:last-of-type { border-bottom: 0; }
               <span class="mono muted">Marketing sites</span>
             </div>
             <dl>
-              <div><dt>Problem</dt><dd>Cloud and logistics software companies needed sites that explain complex products and turn visitors into demo requests.</dd></div>
-              <div><dt>Built</dt><dd>Product, pricing and feature pages with custom interactions, lead capture and CRM hand-off.</dd></div>
-              <div><dt>Outcome</dt><dd class="todo">[Add a result: leads, launch, page speed, or client quote]</dd></div>
+              <div><dt>Vision</dt><dd>Help cloud and logistics software companies show what their products do and win more demo requests.</dd></div>
+              <div><dt>What I made</dt><dd>Clear product, pricing and feature pages with custom interactions, lead capture and CRM hand-off.</dd></div>
+              <div><dt>Impact</dt><dd class="todo">[Add a result: leads, launch, page speed, or client quote]</dd></div>
             </dl>
             <div class="tags"><span class="tag">Custom JavaScript</span><span class="tag">Lead capture</span><span class="tag">Integrations</span></div>
           </div>
@@ -378,9 +380,9 @@ section:last-of-type { border-bottom: 0; }
               <span class="mono muted">Product · in development</span>
             </div>
             <dl>
-              <div><dt>Problem</dt><dd>A Malaysian training company was running its programs and government-funded training claims across scattered tools.</dd></div>
-              <div><dt>Building</dt><dd>One internal system (ERP) to run the business end to end. I am a working partner on the product, from structure and user flows to the build itself.</dd></div>
-              <div><dt>Status</dt><dd>In active development.</dd></div>
+              <div><dt>Vision</dt><dd>Give a growing Malaysian training company one place to run its programs and government-funded training claims.</dd></div>
+              <div><dt>What I'm making</dt><dd>An internal system (ERP) that runs the business end to end. I am a working partner on the product, from structure and user flows to the build itself.</dd></div>
+              <div><dt>Stage</dt><dd>In active development.</dd></div>
             </dl>
             <div class="tags"><span class="tag">ERP</span><span class="tag">Web app</span><span class="tag">Product</span></div>
           </div>
@@ -394,9 +396,9 @@ section:last-of-type { border-bottom: 0; }
               <span class="mono muted">Personal product</span>
             </div>
             <dl>
-              <div><dt>Problem</dt><dd>Singers and worship leaders needed a fast way to find and read hymns on any device.</dd></div>
-              <div><dt>Built</dt><dd>A searchable, phone-first hymnal that runs in the browser and installs on Windows through the Microsoft Store.</dd></div>
-              <div><dt>Outcome</dt><dd class="todo">[Add a result: users, churches using it, or a feature you are proud of]</dd></div>
+              <div><dt>Vision</dt><dd>Put the hymnal in every singer's and worship leader's pocket, on any device.</dd></div>
+              <div><dt>What I made</dt><dd>A searchable, phone-first hymnal that runs in the browser and installs on Windows through the Microsoft Store.</dd></div>
+              <div><dt>Impact</dt><dd class="todo">[Add a result: users, churches using it, or a feature you are proud of]</dd></div>
             </dl>
             <div class="tags"><span class="tag">Web app</span><span class="tag">Microsoft Store</span><span class="tag">Search</span></div>
             <div class="links">
@@ -413,9 +415,9 @@ section:last-of-type { border-bottom: 0; }
               <span class="mono muted">Print book · on sale</span>
             </div>
             <dl>
-              <div><dt>Brief</dt><dd>Take a finished manuscript and turn it into a book that reads well and is ready for commercial printing.</dd></div>
-              <div><dt>Built</dt><dd>The complete print design: cover, interior layout and typography, prepared to printer specifications.</dd></div>
-              <div><dt>Outcome</dt><dd>Published and on sale on Amazon.</dd></div>
+              <div><dt>Vision</dt><dd>Turn an author's manuscript into a beautiful book, ready for readers and for print.</dd></div>
+              <div><dt>What I made</dt><dd>The complete print design: cover, interior layout and typography, prepared to printer specifications.</dd></div>
+              <div><dt>Impact</dt><dd>Published and on sale on Amazon.</dd></div>
             </dl>
             <div class="tags"><span class="tag">InDesign</span><span class="tag">Illustrator</span><span class="tag">Print production</span></div>
             <a class="more" href="https://www.amazon.com/dp/B0DFWJHLSJ" rel="noopener">View on Amazon →</a>
